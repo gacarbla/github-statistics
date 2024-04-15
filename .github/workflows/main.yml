@@ -1,4 +1,4 @@
-name: Generate Stats Images
+name: My Github Statitics
 
 on:
   push:
@@ -31,7 +31,6 @@ jobs:
       run: |
         python3 -m pip install --upgrade pip setuptools wheel
         python3 -m pip install -r requirements.txt
-
     # Generate all statistics images
     - name: Generate images
       run: |
@@ -47,8 +46,8 @@ jobs:
     # Commit all changed files to the repository
     - name: Commit to the repo
       run: |
-        git config --global user.name "jstrieb/github-stats"
-        git config --global user.email "github-stats[bot]@jstrieb.github.io"
+        git config --global user.name "gacarbla/github-statistics"
+        git config --global user.email "gacarbla@gacarbla.es"
         git add .
         # Force the build to succeed, even if no files were changed
         git commit -m 'Update generated files' || true
